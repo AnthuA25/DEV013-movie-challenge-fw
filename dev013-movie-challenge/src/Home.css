@@ -1,0 +1,30 @@
+
+.headerMovie{
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid yellow; */
+  width: 1437px;
+  /* width: 100%; */
+}
+.titleMovie{
+  color:white;
+  background-color: rgba(25, 12, 23, 0.75);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
+  height: 50px;
+}
+.NavBar{
+  color: white;
+  width: 1437px;
+  height: 600px;
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  border: 2px solid red;
+}
+.NavBar > h4{
+  margin: 0;
+  font-style: normal;
+}

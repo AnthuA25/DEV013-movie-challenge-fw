@@ -1,15 +1,20 @@
 
-import './App.css'
-// import {CarruselMovie} from './components/CarruselMovie'
+import './Home.css'
+// import {CarruselMovie} from './components/CarruselMovie';
 
 function Home() {
 
-
   return (
     <>
-      <div className='NavBar'>
-        <h4>WatchMovie</h4>
-      </div>
+      <header className='headerMovie'>
+        <div className='titleMovie'>
+            <h4>WatchMovie</h4>
+        </div>
+        <div className='NavBar'>
+          {/* <CarruselMovie/> */}
+        </div>
+      </header>
+      
     </>
   )
 }

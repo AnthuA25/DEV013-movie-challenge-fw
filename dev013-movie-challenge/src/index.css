@@ -6,3 +6,10 @@
   min-height: 100vh;
   background-color:#190C17;
 } */
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color:#190C17;
+}
