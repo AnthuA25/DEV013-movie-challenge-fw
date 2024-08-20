@@ -1,6 +1,6 @@
 import { apiKey} from "../modules/Api";
 import { Movie } from "../model/Movie";
-
+import { formatMovie, MovieData } from "../utils/transformers";
 
 
 export const getNowPlaying = async (): Promise<Movie[]> => {
@@ -21,6 +21,20 @@ export const getNowPlaying = async (): Promise<Movie[]> => {
 };
 
 
+export const getTopMovie = async (): Promise<Movie[]> => {
+  const resp = await fetch(`https://api.themoviedb.org/3/discover/movie?language=es-ES`, {
+      headers: {
+        "Authorization": `Bearer ${apiKey}`
+      }
+  });
+
+  if (!resp.ok) {
+    throw new Error('Network response was not ok');
+  }
+  const data = await resp.json();
+  const movies = data.results.map((movie:MovieData) => formatMovie(movie));
+  return movies;
+}
 
 
 
