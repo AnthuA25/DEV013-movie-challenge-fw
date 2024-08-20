@@ -1,0 +1,123 @@
+.main {
+  /* border: 2px solid red; */
+  margin: 0;
+}
+.title-top {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 40px;
+  gap: 10px;
+}
+.icon-top {
+  color: #996d92;
+  width: 50px;
+  height: 50px;
+}
+.title {
+  color: white;
+  font-weight: lighter;
+  font-size: 3rem;
+}
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-list {
+  margin: 0;
+  padding: 40px;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  color: white;
+}
+.arrow {
+  background-color: #996d92;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  color: rgb(44, 27, 50, 0.75);
+  cursor: pointer;
+}
+.left-arrow {
+  width: 20px;
+  height: 20px;
+}
+.movie-card {
+  border: 2px solid yellow;
+  background-color: rgba(44, 27, 50, 0.75);
+  padding: 30px;
+  width: 260px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.movie-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 430px solid transparent; /* Altura del triángulo */
+  border-left: 320px solid transparent; /* Anchura del triángulo */
+  border-bottom: 430px solid rgba(153, 109, 146, 0.46);
+  border-right: 320px solid rgba(153, 109, 146, 0.46);
+  /* z-index: 1;  */
+}
+.movie-card > * {
+  position: relative;
+  z-index: 2;
+}
+.movie-info {
+  /* border: 2px solid red; */
+  overflow: hidden;
+  min-height: 60px;
+  min-width: 230px; 
+  width: 100%; 
+  box-sizing: border-box; 
+  color: white;
+  text-align: center; 
+  white-space: normal; 
+  word-wrap: break-word; 
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+.movie-info h3 {
+  /* border: 2px solid red; */
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  margin: 0; 
+  overflow-wrap: break-word;
+}
+.movie-card img {
+  width: 240px; 
+  height: 600px; 
+  /* object-fit: cover;  */
+}
+.movie-card > p {
+  background-color: rgba(43, 28, 63, 0.84);
+  border-radius: 50px;
+  padding: 6px;
+  position: absolute;
+  font-weight: bold;
+  right: 10px;
+  bottom: -5px;
+}
