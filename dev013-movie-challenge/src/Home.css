@@ -2,9 +2,10 @@
 .headerMovie{
   display: flex;
   flex-direction: column;
-  /* border: 2px solid yellow; */
-  width: 1437px;
-  /* width: 100%; */
+  width: 100%;
+  min-width: 100vw;
+  margin-bottom: 20px;
+
 }
 .titleMovie{
   color:white;
@@ -14,15 +15,17 @@
   align-items: center;
   padding-left: 10px;
   height: 50px;
+  /* position: relative; 
+  z-index: 2;  */
 }
 .NavBar{
   color: white;
-  width: 1437px;
-  height: 600px;
-  position: absolute;
+  width: 100%;
+  height: 650px;
+  /* position: absolute; */
   z-index: -1;
   margin: 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 .NavBar > h4{
   margin: 0;
