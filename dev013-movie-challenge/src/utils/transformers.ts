@@ -1,7 +1,11 @@
 
 import { Genre } from '../service/movieService';
 import { Movie } from '../model/Movie';
-
+export interface Actor {
+    id: number;
+    name: string;
+    profile_path?: string; 
+}
 
 export interface MovieData {
     adult: boolean;
