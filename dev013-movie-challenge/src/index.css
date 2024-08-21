@@ -7,9 +7,12 @@
   background-color:#190C17;
 } */
 body {
+  /* box-sizing: border-box; */
+  overflow-x: hidden;
   margin: 0;
   display: flex;
   min-width: 320px;
   min-height: 100vh;
   background-color:#190C17;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
