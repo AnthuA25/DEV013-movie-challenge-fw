@@ -1,0 +1,132 @@
+.title-top {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 40px;
+  gap: 10px;
+}
+.icon-top {
+  color: #996d92;
+  width: 50px;
+  height: 50px;
+}
+.title {
+  color: white;
+  font-weight: lighter;
+  font-size: 3rem;
+}
+
+.filter-container {
+  /* background: linear-gradient(
+    to top,
+    rgba(153, 109, 146, 1) 0%,
+    rgba(25, 12, 23, 1) 100%
+  ); */
+  background: linear-gradient(
+    to top,
+    rgba(153, 109, 146, 0.72) 20%,
+    rgba(25, 12, 23, 1) 100%
+  );
+  width: 100%;
+  min-width: 100vw;
+  height: 85px;
+  display: flex;
+  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red */
+}
+.filter-op {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 5px;
+  font-weight: lighter;
+}
+.filter-op::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+.filter-op.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+
+.filter-op:hover::after {
+  width: 100%;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.filters{
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-dropdown{
+  /* background-color: rgba(153, 109, 146, 0.28); */
+  /* background-color: rgba(149, 98, 141, 0.4); */
+  background-color: rgba(174, 125, 166, 0.38);
+  width: 70%;
+  margin-left: auto;
+  /* padding: 10px; */
+  height: 100px;
+  margin-top: 0px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.filters__select select {
+  width: 150px;
+  height: 30px;
+  background-color:rgba(153, 109, 146);
+  color: rgba(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  padding-left: 10px;
+  outline: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); 
+}
+.filters__option {
+  display: flex;
+  flex-direction: column;
+  margin: 3px; /* Margen entre label y select */
+}
+
+.filters__option label {
+  margin-bottom: 3px;
+  font-weight: lighter;
+}
+.reset-filters{
+  background-color:rgba(153, 109, 146);
+  border: none;
+  border-radius: 6px;
+  color: rgba(255, 255, 255);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  padding: 6px;
+}
