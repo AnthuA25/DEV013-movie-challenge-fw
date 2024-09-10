@@ -112,3 +112,19 @@
     width: 100%;
     height: auto; 
 }
+
+@media (max-width: 768px) {
+    .movie-detail-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-poster, .movie-info {
+        width: 100%;
+    }
+
+    .movie-info {
+        padding-left: 0;
+        text-align: center;
+    }
+}
