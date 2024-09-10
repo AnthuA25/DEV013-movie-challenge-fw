@@ -1,4 +1,5 @@
 import { Movie } from "../model/Movie";
+import { useNavigate } from "react-router-dom";
 import defaultPoster from "../assets/default-movie.jpg";
 
 
@@ -7,9 +8,12 @@ interface MovieCardProps {
 }
 
 export const MovieCard = ({ movie }: MovieCardProps) => {
-
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/movie/${movie.id}`);
+  };
   return (
-    <div  className="movie-card">
+    <div onClick={handleClick} className="movie-card">
       <img src={movie.poster_path.includes("null") || movie.poster_path.includes("undefined") ? defaultPoster : movie.poster_path} alt={movie.title}/>
       <div className="movie-info">
         <h3>{movie.title || 'Título no disponible'}</h3>
