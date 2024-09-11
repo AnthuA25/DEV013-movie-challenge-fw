@@ -26,13 +26,13 @@
     justify-content: space-around;
     align-items: center;
     position: relative;
-    z-index: 2; /* Asegura que el contenido esté encima de la capa de color */
+    z-index: 2; 
     width: 100%;
     height: 100vh; 
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    padding: 20px;/* Fondo semi-transparente para mejorar la legibilidad */
+    margin: 0 auto; 
+    padding: 20px;
     border-radius: 8px;
-    color: #fff; /* Asegura que el texto sea legible */
+    color: #fff;
 }
 .movie-poster{
     /* border: 2px solid red; */
