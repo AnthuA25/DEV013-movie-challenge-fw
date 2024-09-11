@@ -18,7 +18,7 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
       <div className="movie-info">
         <h3>{movie.title || 'Título no disponible'}</h3>
       </div>
-      <p>{movie.release_date || '-'}</p>
+      <p>{movie.release_year || '-'}</p>
     </div>
   );
 };
