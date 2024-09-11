@@ -65,7 +65,7 @@ export const TopMovie = () => {
               <div className="movie-info">
                 <h3>{movie.title}</h3>
               </div>
-              <p>{movie.release_date}</p>
+              <p>{movie.release_year}</p>
             </div>
           ))}
         </div>
