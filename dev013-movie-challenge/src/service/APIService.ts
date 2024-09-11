@@ -39,7 +39,8 @@ export const getMovie = async (filters:Filters,genres: Map<number, string>): Pro
   const filter = filters.genreId ? `&with_genres=${filters.genreId}` : "";
   const sort = filters.sortBy ? `&sort_by=${filters.sortBy}` : "";
   const search = filters.searchQuery ? `&query=${filters.searchQuery}` : "";
-  const url =`https://api.themoviedb.org/3/discover/movie?language=es-ES&page=${filters.page}${filter}${sort}${search}`;
+  const url = filters.searchQuery ? `https://api.themoviedb.org/3/search/movie?language=es-ES&page=${filters.page}${filter}${sort}${search}`:
+  `https://api.themoviedb.org/3/discover/movie?language=es-ES&page=${filters.page}${filter}${sort}${search}`;
   const resp = await fetch(url, {
       headers: {
         "Authorization": `Bearer ${apiKey}`
