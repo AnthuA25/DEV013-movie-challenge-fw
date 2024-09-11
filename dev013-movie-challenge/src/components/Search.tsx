@@ -8,7 +8,6 @@ interface SearchProps {
 
 export const Search = ({ onSearch }: SearchProps) => {
   const [searchQuery, setSearchQuery] = useState("");
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
@@ -16,7 +15,7 @@ export const Search = ({ onSearch }: SearchProps) => {
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();
     if (searchQuery.trim()) {
-      onSearch(searchQuery); 
+      onSearch(searchQuery.toLowerCase()); 
     }
     setSearchQuery("");
   };
