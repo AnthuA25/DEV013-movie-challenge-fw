@@ -51,7 +51,7 @@
   height: 20px;
 }
 .movie-card {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   background-color: rgba(44, 27, 50, 0.75);
   padding: 30px;
   width: 260px;
