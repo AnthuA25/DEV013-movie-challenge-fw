@@ -15,7 +15,9 @@ export const Search = ({ onSearch }: SearchProps) => {
 
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();
-    onSearch(searchQuery);
+    if (searchQuery.trim()) {
+      onSearch(searchQuery); 
+    }
     setSearchQuery("");
   };
 
