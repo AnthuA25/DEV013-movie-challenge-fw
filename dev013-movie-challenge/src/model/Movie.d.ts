@@ -3,10 +3,9 @@ export type Movie = {
     title: string;
     poster_path: string;
     backdrop_path:string;
-    description: string;
     genres: string[];
     overview: string;
-    release_date:string;
+    release_year:number;
     popularity: number;
     credits?: {
         cast: {
