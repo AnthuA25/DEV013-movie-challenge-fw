@@ -8,18 +8,14 @@ export interface Actor {
 }
 
 export interface MovieData {
-    adult: boolean;
-    backdrop_path: string;
-    genre_ids: number[];
     id: number;
-    original_language: string;
-    original_title: string;
-    overview: string;
-    popularity: number;
-    poster_path: string;
-    release_date: string;
     title: string;
-    description: string;
+    overview: string;
+    backdrop_path: string;
+    poster_path: string;
+    genre_ids?: number[];
+    popularity: number;
+    release_date: string;
 }
 
 export const formatMovie = (movieData: MovieData, genreMap?: Map<number, string>):Movie => {
@@ -30,9 +26,8 @@ export const formatMovie = (movieData: MovieData, genreMap?: Map<number, string>
     return {
         id: movieData.id,
         title: movieData.title,
-        release_date: movieData.release_date ? movieData.release_date.substring(0, 4) : '',
+        release_year: new Date(movieData.release_date).getFullYear(),
         poster_path: `https://image.tmdb.org/t/p/w500${movieData.poster_path}`,
-        description: movieData.description,
         overview: movieData.overview,
         backdrop_path: `https://image.tmdb.org/t/p/w1280${movieData.backdrop_path}`,
         popularity:movieData.popularity,
