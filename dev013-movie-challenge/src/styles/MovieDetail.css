@@ -41,21 +41,28 @@
     align-items: center;
     width: 40%;
 }
+
 .movie-detail-content .img-movie-detail{
     /* border: 2px solid red; */
     border-radius: 50px;
     width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
+    height: auto;
     max-width: 400px;
     max-height: 590px;
 }
 .movie-info{
     /* border: 2px solid red; */
     width: 50%;
-    padding: 20px; /* Espacio entre la imagen y la información */
+    padding: 20px; 
     display: flex;
     justify-content: center;
     align-items: start;
+}
+.movie-title-detail{
+    font-size: 3rem;
+    margin:0;
+    padding-bottom:20px;
+    line-height: 1.2;
 }
 .movie-info .movie-title{
     font-size: 3rem;
@@ -65,8 +72,8 @@
 }
 .movie-info p {
     text-align: justify;
-    margin-bottom: 10px; /* Espacio entre párrafos */
-    line-height: 1.6; /* Mejora la legibilidad */
+    margin-bottom: 10px; 
+    line-height: 1.6; 
 }
 .movie-genres{
     display: flex;
