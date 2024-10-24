@@ -54,7 +54,7 @@ export const Pagination = ({
 
   return (
     <div className="pagination">
-      <button onClick={handlePrev} disabled={currentPage === 1}>
+      <button onClick={handlePrev} disabled={currentPage === 1} aria-label="Previous">
         <IoIosArrowBack />
       </button>
       {getPagination().map((page, index) => (
@@ -63,6 +63,7 @@ export const Pagination = ({
           onClick={() => handlePageClick(page)}
           className={page === currentPage ? "active" : ""}
           disabled={page === "..." || page === currentPage}
+          aria-label="Next"
         >
           {page}
         </button>

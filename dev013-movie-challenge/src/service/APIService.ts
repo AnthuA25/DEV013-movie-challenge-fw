@@ -1,7 +1,6 @@
 import { apiKey } from "../modules/Api";
 import { Movie } from "../model/Movie";
 import { formatMovie, MovieData } from "../utils/transformers";
-
 interface Filters {
   page?: number;
   genreId?: number | null;
@@ -48,7 +47,7 @@ export const getMovie = async (filters: Filters, genres: Map<number, string>): P
       }
     });
     if (!resp.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error(`HTTP error! status: ${resp.status}`);
     }
     const data = await resp.json();
     const movies = data.results.map((movie: MovieData) => formatMovie(movie, genres));
@@ -63,8 +62,8 @@ export const getMovie = async (filters: Filters, genres: Map<number, string>): P
     };
     return result;
   } catch(error){
-    console.error('Fetch error:', error)
-    throw error
+    console.error('Fetch error:', error); 
+    throw error;
   }
   
 }
